@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travis Edlefsen</title>
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Pacifico|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="css/homepage.css" rel="stylesheet" />
+
+</head>
+<body>
+<div class="main-content-wrapper">
+	<div class="main-content">
+		<div class="top-panel homepage-panel">
+			<div class="navigation-wrapper">
+				<div class="navigation-flex">
+					<ul class="navigation">
+						<li><a href="index.html" class="light"><img src="img/PersonalLogo.svg"></a></li>
+						<li><a href="#" id="aboutScroll" class="light">About</a></li>
+						<li><a href="#" id="portfolioScroll" class="light">Portfolio</a></li>
+						<li><a href="#" id="contactScroll" class="light">Contact</a></li>
+					</ul>
+					<a href="resume.html" class="light">Resume</a>
+				</div>
+			</div>
+			<div class="inner-content top-panel-text">
+				<h1>Welcome</h1>
+				<h4 class="subtext">Portfolio of Travis Edlefsen</h4>
+			</div>
+		</div>
+		<div id="aboutScrollTo">
+		</div>
+		<div class="about-wrapper homepage-panel">
+			<div class="about inner-content">
+				<div class="">
+					<img src="img/personalPic.jpg" alt="" class="profile-img"/>
+				</div>
+				<h2>About Me</h2>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</br>I like turtles.</p>
+			</div>
+		</div>
+		<div id="portfolioScrollTo">
+		</div>
+		<div id="portfolio" class="link-boxes inner-content homepage-panel">
+			<h2>Portfolio</h2>
+			<div class="link-box-wrapper">
+			   <div class="link-box">
+				 <a class="link-box link box-1" href="#">
+				   <div class="lb-overlay lb-top"></div>
+				   <div class="lb-top-text singleLine"><h3>Web</h3>
+					 <p>I have designed and coded websites, CMRs, technical dashboards, email newsletters, and digital adverts.</p></div>
+				   <div class="lb-overlay lb-bottom"><h4>Click to View</h4></div>
+				   <div class="lb-screen"></div>
+				 </a>
+			  </div>
+			</div><!--
+			  --><div class="link-box-wrapper">
+			   <div class="link-box">
+				 <a class="link-box link box-2" href="https://www.behance.net/teddyr00se">
+				   <div class="lb-overlay lb-top"></div>
+				   <div class="lb-top-text"><h3>Print &amp; Digital Ads</h3>
+					 <p>I currently design and manage print and digital campaigns. Inlcudes everything from direct mailers and brochures to signage to car wraps.</p></div>
+				   <div class="lb-overlay lb-bottom"><h4>Click to View</h4></div>
+				   <div class="lb-screen"></div>
+				 </a>
+			  </div>
+			</div><!--
+			  --><div class="link-box-wrapper">
+			   <div class="link-box">
+				 <a class="link-box link box-3" href="https://vimeo.com/teddyr00se">
+				   <div class="lb-overlay lb-top"></div>
+				   <div class="lb-top-text"><h3>Video &amp; Motion Ads</h3>
+					 <p>My portfolio video and motion art. Checkout my product and marketing videos!</p></div>
+				   <div class="lb-overlay lb-bottom"><h4>Click to View</h4></div>
+				   <div class="lb-screen"></div>
+				 </a>
+			  </div>
+			</div>
+		</div>
+		<div class="contact-wrapper homepage-panel">
+			<h2>Contact Me</h2>
+			<form class="contact inner-content">
+				<input type="text" name="firstName" id="fnameInput" class="fname textinput" placeholder="First Name" required>
+				<input type="text" name="lastName" id="lnameInput" class="lname textinput" placeholder="Last Name" required>
+				<input type="text" name="company" id="companyInput" class="company textinput" placeholder="Company Name">
+				<input type="email" name="email" id="emailInput" class="company textinput" placeholder="Email Address" tabindex="2" required>
+				<textarea id="messageInput" class="textinput" name="message" cols="40" rows="10" placeholder="Message" required></textarea>
+				<input id="submitButton" type="submit" value="Send&nbsp;" class="submit" value="Submit" />
+				<!-- <input id="result" type="reset" value="Clear"> -->
+			</form>
+		</div>
+	</div><!-- Close main content -->
+</div><!-- Close main content wrapper -->
+<script type="text/javascript">
+	$("document").ready(function(){
+	        $('#aboutScroll').click(function(){
+	             $('html, body').animate({
+	                 scrollTop: $("#aboutScrollTo").offset().top
+	             }, 2000);
+	         });
+	        $('#portfolioScroll').click(function(){
+	            $('html, body').animate({
+	                scrollTop: $("#portfolioScrollTo").offset().top
+	            }, 2000);
+	        });
+	        $('#contactScroll').click(function(){
+	            $('html, body').animate({
+	                scrollTop: $(".contact").offset().top
+	            }, 2000);
+	        });
+	    });
+</script>
+<script type="text/javascript">
+	$('#submitButton').click(function() {
+	    var val1 = $('fnameInput').val();
+	    var val2 = $('lnameInput').val();
+	    var val1 = $('companyInput').val();
+	    var val2 = $('emailInput').val();
+	    var val1 = $('messageInput').val();
+	    $.ajax({
+	        type: 'POST',
+	        url: 'mail.php',
+	        data: { text1: val1, text2: val2 },
+	        success: function(response) {
+	            $('#result').html(response);
+	        }
+	    });
+	});
+</script>
+</body>
+</html>
